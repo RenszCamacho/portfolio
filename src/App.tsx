@@ -1,10 +1,18 @@
-const App = () => {
+import { Navbar, Footer } from './components';
+import {
+  Header, About, Contact, Skills, Work
+} from './pages';
+
+export default function App() {
   return (
-    <div>
-      <h1>App</h1>
+    <div className="app">
+      <Navbar />
+      <Header />
+      <About />
+      <Contact />
+      <Skills />
+      <Work />
+      <Footer />
     </div>
-  )
+  );
 }
-
-export default App
-

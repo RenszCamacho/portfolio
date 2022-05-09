@@ -1,24 +1,24 @@
-module.export = {
+module.exports = {
   env: {
     browser: true,
     es2021: true,
-    jest: true,
+    jest: true
   },
   extends: [
     'plugin:react/recommended',
-    'airbnb',
+    'airbnb'
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaFeatures: {
-      jsx: true,
+      jsx: true
     },
-    ecmaVersion: 'lates',
-    sourceType: 'module',
+    ecmaVersion: 'latest',
+    sourceType: 'module'
   },
   plugins: [
     'react',
-    '@typescript-eslint',
+    '@typescript-eslint'
   ],
   rules: {
     'comma-dangle': [2, 'never'],
@@ -31,13 +31,13 @@ module.export = {
       'ignorePackages',
       {
         ts: 'never',
-        tsx: 'never',
-      },
-    ],
+        tsx: 'never'
+      }
+    ]
   },
   settings: {
     'import/resolver': {
-      typescript: {},
-    },
-  },
+      typescript: {}
+    }
+  }
 };
