@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'comma-dangle': [2, 'never'],
     'no-use-before-define': 'off',
+    'no-unused-vars': 'off',
     '@typescript-eslint/no-use-before-define': ['error'],
     'react/jsx-filename-extension': ['warn', { extensions: ['.tsx'] }],
     'react/react-in-jsx-scope': 'off',
