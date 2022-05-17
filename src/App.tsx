@@ -1,4 +1,4 @@
-import { Navbar, Footer } from './components';
+import { Footer, Navbar } from './components';
 import {
   Header, About, Contact, Skills, Work
 } from './pages';
