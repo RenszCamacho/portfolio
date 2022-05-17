@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion';
 
-import images from '../../constants';
+import { images, logos } from '../../constants';
 import './header.scss';
 
 const scaleVariants = {
@@ -14,8 +14,6 @@ const scaleVariants = {
   }
 };
 
-const logos = [images.redux, images.sass, images.flutter];
-
 export default function Header() {
   return (
     <div id="home" className="app__header app__flex">
@@ -26,7 +24,7 @@ export default function Header() {
       >
         <div className="app__header-badge">
           <div className="badge-cmp app__flex">
-            <span>👋</span>
+            <span>🚀</span>
 
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
@@ -36,8 +34,7 @@ export default function Header() {
           </div>
 
           <div className="tag-cmp app__flex">
-            <p className="p-text">Web Developer</p>
-            {/* <p className="p-text">Mobile Developer</p> */}
+            <p className="p-text">Front-end Web Developer </p>
           </div>
 
         </div>
