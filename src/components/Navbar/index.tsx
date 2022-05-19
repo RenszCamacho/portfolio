@@ -3,6 +3,7 @@ import { HiMenuAlt4, HiX } from 'react-icons/hi';
 import { motion } from 'framer-motion';
 
 import { images, routes } from '../../constants';
+
 import './navbar.scss';
 
 export default function Navbar() {
