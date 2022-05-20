@@ -1,6 +1,8 @@
 import { motion } from 'framer-motion';
 
 import { images, logos } from '../../constants';
+import { AppWrap } from '../../hocs';
+
 import './header.scss';
 
 const scaleVariants = {
@@ -14,7 +16,7 @@ const scaleVariants = {
   }
 };
 
-export default function Header() {
+function Header() {
   return (
     <div id="home" className="app__header app__flex">
       <motion.div
@@ -72,3 +74,5 @@ export default function Header() {
     </div>
   );
 }
+
+export default AppWrap(Header, 'home', '');

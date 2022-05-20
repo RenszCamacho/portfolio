@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
 
-import { client, urlFor } from '../../client';
 import { IAbouts } from '../../interfaces/IAbout';
+import { client, urlFor } from '../../client';
+import { AppWrap, MotionWrap } from '../../hocs';
 
 import './about.scss';
 
-export default function About() {
+function About() {
   const [abouts, setAbouts] = useState<IAbouts[]>([]);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function About() {
       <h2 className="head-text">
         I know that
         {' '}
-        <span>Good Product</span>
+        <span>Good Apps</span>
         <br />
         means
         {' '}
@@ -51,3 +52,9 @@ export default function About() {
     </>
   );
 }
+
+export default AppWrap(
+  MotionWrap(About, 'app__about'),
+  'about',
+  'app__whitebg'
+);
