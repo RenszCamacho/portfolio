@@ -12,24 +12,26 @@ export default function Navbar() {
   const handleClick = () => setToggle((event) => !event);
 
   return (
-    <nav className="app__navbar">
-      <div className="app__navbar-logo">
-        <img src={images.gio} alt="logo" />
-      </div>
+    <header>
+      <h1 className="sr-only">Renszo Giovanni Portfolio</h1>
+      <nav className="app__navbar">
+        <div className="app__navbar-logo">
+          <img src={images.gio} alt="logo" />
+        </div>
 
-      <ul className="app__navbar-links">
-        { routes.map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
-            <div />
-            <a href={`#${item}`}>{item}</a>
-          </li>
-        )) }
-      </ul>
+        <ul className="app__navbar-links">
+          { routes.map((item) => (
+            <li className="app__flex p-text" key={`link-${item}`}>
+              <div />
+              <a href={`#${item}`}>{item}</a>
+            </li>
+          )) }
+        </ul>
 
-      <div className="app__navbar-menu">
-        <HiMenuAlt4 onClick={handleClick} />
+        <button type="button" className="app__navbar-menu">
+          <HiMenuAlt4 onClick={handleClick} />
 
-        { toggle && (
+          { toggle && (
           <motion.div
             whileInView={{ x: [280, 0] }}
             transition={{ duration: 0.85, ease: 'easeOut' }}
@@ -49,9 +51,10 @@ export default function Navbar() {
               )) }
             </ul>
           </motion.div>
-        ) }
+          ) }
 
-      </div>
-    </nav>
+        </button>
+      </nav>
+    </header>
   );
 }

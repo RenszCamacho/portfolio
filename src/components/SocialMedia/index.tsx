@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 import { BsTwitter, BsInstagram } from 'react-icons/bs';
 import { FaFacebook } from 'react-icons/fa';
 
@@ -10,10 +11,10 @@ const socialIcons = [
 export default function SocialMedia() {
   return (
     <div className="app__social">
-      {socialIcons.map((Icon) => (
-        <div className="app__social-button">
+      {socialIcons.map((Icon, index) => (
+        <button type="button" key={index} className="app__social-button">
           <Icon />
-        </div>
+        </button>
       ))}
     </div>
   );

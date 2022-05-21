@@ -1,4 +1,4 @@
-import { Footer, Navbar } from './components';
+import { Navbar } from './components';
 import {
   Header, About, Contact, Skills, Work
 } from './pages';
@@ -9,12 +9,13 @@ export default function App() {
   return (
     <div className="app">
       <Navbar />
-      <Header />
-      <About />
-      <Contact />
-      <Skills />
-      <Work />
-      <Footer />
+      <main>
+        <Header />
+        <About />
+        <Work />
+        <Skills />
+        <Contact />
+      </main>
     </div>
   );
 }

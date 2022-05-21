@@ -1,14 +1,16 @@
-/* eslint-disable no-undef */
 import { ComponentType } from 'react';
 import { NavigationDots, SocialMedia } from '../../components';
 
 const AppWrap = (
   Component: ComponentType,
   idName: string,
-  classNames: string
+  heading: string,
+  classNames?: string
 ) => function HOC() {
   return (
-    <div id={idName} className={`app__container ${classNames}`}>
+    <section id={idName} className={`app__container ${classNames}`}>
+      <h2 className="sr-only">{heading}</h2>
+
       <SocialMedia />
       <div className="app__wrapper app__flex">
         <Component />
@@ -24,7 +26,7 @@ const AppWrap = (
         </div>
       </div>
       <NavigationDots active={idName} />
-    </div>
+    </section>
   );
 };
 
