@@ -30,7 +30,7 @@ function Header() {
 
             <div style={{ marginLeft: 20 }}>
               <p className="p-text">Hello, I am</p>
-              <h1 className="head-text">Giovanni</h1>
+              <h1 className="head-text">D&apos;Giovanni</h1>
             </div>
 
           </div>
