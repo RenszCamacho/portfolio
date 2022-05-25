@@ -13,7 +13,6 @@ function Skills() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const query = '*[_type == "experiences"]';
       const skillsQuery = '*[_type == "skills"]';
 
       const skillsData = await client.fetch(skillsQuery);
